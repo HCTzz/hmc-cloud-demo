@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-getaway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/commom-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/getaway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/nacos-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/nacos-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/new-cloud/redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin-service-hi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin-service-miya" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

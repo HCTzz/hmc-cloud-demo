@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: sc-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: false
+      routes:
+        - id: service-eureka-client-1
+          #service-hi服务的负载均衡地址
+          uri: lb://SERVICE-EUREKA-CLIENT-1
+          predicates:
+            # 转发已demo开头的请求到service-eureka-client-1
+            - Path=/demo/**
+          filters:
+            - StripPrefix=1

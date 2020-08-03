@@ -1,0 +1,57 @@
+server:
+  port: 8082
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        - id: consumer-a
+          uri: lb://service-consumer
+          predicates:
+            - Path=/api-a/**
+          filters:
+            - StripPrefix=1
+            - PreserveHostHeader
+            - SaveSession
+        - id: auth-login-process
+          uri: lb://auth-center
+          predicates:
+            - Path=/user/login
+          filters:
+            - PreserveHostHeader
+            - SaveSession
+
+        - id: auth-login-process
+          uri: lb://auth-center
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+            - PreserveHostHeader
+            - SaveSession
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: getaway
+  http:
+    encoding:
+      charset: UTF-8
+  session:
+    redis:
+      namespace: hmc:session
+    store-type: redis
+logging:
+  level:
+    org.springframework.security.*: debug
+management:
+  endpoint:
+    gateway:
+      enabled: true
+hmc:
+  security:
+    session:
+      cookieName: SESSIONID

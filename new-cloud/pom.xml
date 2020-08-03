@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.8.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hmc</groupId>
+    <artifactId>cloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>nacos-provider</module>
+        <module>nacos-consumer</module>
+        <module>getaway</module>
+        <module>auth</module>
+        <module>redis</module>
+        <module>common-core</module>
+        <module>commom-test</module>
+        <module>config</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.cloud.version>Greenwich.SR6</spring.cloud.version>
+        <spring.cloud.alibaba.version>2.1.2.RELEASE</spring.cloud.alibaba.version>
+        <alibaba.nacos.config.version>2.1.2.RELEASE</alibaba.nacos.config.version>
+        <alibaba-nacos-discovery.version>2.1.2.RELEASE</alibaba-nacos-discovery.version>
+        <spring-boot-dependencies.version>2.1.8.RELEASE</spring-boot-dependencies.version>
+        <srping.cloud.getaway.version>2.1.2.RELEASE</srping.cloud.getaway.version>
+        <spring.security.version>2.1.8.RELEASE</spring.security.version>
+        <spring.redis.version>2.1.8.RELEASE</spring.redis.version>
+        <mybatis.spring.boot.version>1.3.4</mybatis.spring.boot.version>
+        <mapper.spring.boot.version>1.2.4</mapper.spring.boot.version>
+        <pagehelper.spring.boot.version>1.2.10</pagehelper.spring.boot.version>
+        <lombok.version>1.16.18</lombok.version>
+        <commons.lang3.version>3.7</commons.lang3.version>
+        <poi.version>3.12</poi.version>
+        <antlr.version>2.7.7</antlr.version>
+        <lettuce.core.version>5.1.6.RELEASE</lettuce.core.version>
+        <commons.pool2.version>2.8.0</commons.pool2.version>
+        <commons.io.version>2.4</commons.io.version>
+        <guava.version>20.0</guava.version>
+        <concurrentlinkedhashmap.lru.version>1.4.2</concurrentlinkedhashmap.lru.version>
+        <auth.version>0.0.1-SNAPSHOT</auth.version>
+        <redisson-spring-boot-starter.versiion>3.12.0</redisson-spring-boot-starter.versiion>
+        <banner.version>1.0.2</banner.version>
+        <redis.moudle.version>1.0-SNAPSHOT</redis.moudle.version>
+        <core.moudle.version>1.0-SNAPSHOT</core.moudle.version>
+        <auth.moudle.version>0.0.1-SNAPSHOT</auth.moudle.version>
+        <fastjson.version>1.2.7</fastjson.version>
+        <sentinel.version>1.7.2</sentinel.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--    sentinel        -->
+
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
+                <version>${sentinel.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.csp</groupId>-->
+<!--                <artifactId>sentinel-core</artifactId>-->
+<!--                <version>${sentinel.version}</version>-->
+<!--            </dependency>-->
+            <!--    sentinel        -->
+
+            <!--     moudle       -->
+            <dependency>
+                <groupId>com.hmc</groupId>
+                <artifactId>redis</artifactId>
+                <version>${redis.moudle.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hmc</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${core.moudle.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hmc</groupId>
+                <artifactId>auth</artifactId>
+                <version>${auth.moudle.version}</version>
+            </dependency>
+
+            <!--     moudle       -->
+
+            <!--    数据库    -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <scope>runtime</scope>
+            </dependency>
+            <!--    数据库    -->
+
+            <!--    session        -->
+
+            <!--    session        -->
+
+
+            <dependency>
+                <groupId>com.nepxion</groupId>
+                <artifactId>banner</artifactId>
+                <version>${banner.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hmc</groupId>
+                <artifactId>auth</artifactId>
+                <version>${auth.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.googlecode.concurrentlinkedhashmap</groupId>
+                <artifactId>concurrentlinkedhashmap-lru</artifactId>
+                <version>${concurrentlinkedhashmap.lru.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons.pool2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.lettuce</groupId>
+                <artifactId>lettuce-core</artifactId>
+                <version>${lettuce.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>antlr</groupId>
+                <artifactId>antlr</artifactId>
+                <version>${antlr.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-security</artifactId>-->
+<!--                <version>${spring.security.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-data-redis</artifactId>-->
+<!--                <version>${spring.redis.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-spring-boot-starter.versiion}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${srping.cloud.getaway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${alibaba-nacos-discovery.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${alibaba.nacos.config.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

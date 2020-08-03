@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="config-client" />
+        <module name="redis" />
+        <module name="demo" />
+        <module name="commom-test" />
+        <module name="nacos-provider" />
+        <module name="zipkin-service-hi" />
+        <module name="auth" />
+        <module name="cloud-getaway" />
+        <module name="cloud-eureka-client" />
+        <module name="getaway" />
+        <module name="nacos-consumer" />
+        <module name="cloud-zuul" />
+        <module name="common-core" />
+        <module name="eureka-server" />
+        <module name="cloud-ribbon" />
+        <module name="config" />
+        <module name="cloud-feign" />
+        <module name="nacos-config" />
+        <module name="zipkin-service-miya" />
+        <module name="eurekaserver1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth" options="-parameters" />
+      <module name="cloud-eureka-client" options="-parameters" />
+      <module name="cloud-feign" options="-parameters" />
+      <module name="cloud-getaway" options="-parameters" />
+      <module name="cloud-ribbon" options="-parameters" />
+      <module name="cloud-zuul" options="-parameters" />
+      <module name="commom-test" options="-parameters" />
+      <module name="common-core" options="-parameters" />
+      <module name="config" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eurekaserver1" options="-parameters" />
+      <module name="getaway" options="-parameters" />
+      <module name="nacos-consumer" options="-parameters" />
+      <module name="nacos-provider" options="-parameters" />
+      <module name="new-cloud" options="-parameters" />
+      <module name="redis" options="-parameters" />
+      <module name="zipkin-service-hi" options="-parameters" />
+      <module name="zipkin-service-miya" options="-parameters" />
+    </option>
+  </component>
+</project>
