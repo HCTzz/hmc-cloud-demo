@@ -45,7 +45,7 @@
         <antlr.version>2.7.7</antlr.version>
         <lettuce.core.version>5.1.6.RELEASE</lettuce.core.version>
         <commons.pool2.version>2.8.0</commons.pool2.version>
-        <commons.io.version>2.4</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <guava.version>20.0</guava.version>
         <concurrentlinkedhashmap.lru.version>1.4.2</concurrentlinkedhashmap.lru.version>
         <auth.version>0.0.1-SNAPSHOT</auth.version>
