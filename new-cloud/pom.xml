@@ -54,7 +54,7 @@
         <redis.moudle.version>1.0-SNAPSHOT</redis.moudle.version>
         <core.moudle.version>1.0-SNAPSHOT</core.moudle.version>
         <auth.moudle.version>0.0.1-SNAPSHOT</auth.moudle.version>
-        <fastjson.version>1.2.7</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <sentinel.version>1.7.2</sentinel.version>
     </properties>
 
